@@ -1,3 +1,15 @@
+import os
+from dotenv import load_dotenv
+
+# Wczytanie zmiennych z pliku .env
+load_dotenv()
+
+# Dostęp do zmiennych środowiskowych
+mongo_uri = os.getenv("MONGO_URI")
+debug_mode = os.getenv("DEBUG")
+
+print("URI:", mongo_uri)
+
 def hello():
     return "Hello, world!"
 
